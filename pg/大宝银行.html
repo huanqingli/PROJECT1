@@ -1,0 +1,852 @@
+<!doctype html>
+<html>
+<head>
+    <title>大宝的银行</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+  
+    body{
+        margin:0px;
+        }
+        
+    .topbar {
+         width: 100%;
+         height: 45px;
+         background-color: #c7000a;
+         border-bottom: 1px solid white;
+    }
+    
+    .fixedwidth {
+         width: 750px;
+         margin-left: 420px;
+    }
+    
+     .searchdiv {
+        float: left;
+        padding: 9.5px 10px 9.5px 0;
+        border-style: none;
+     }
+     
+     .searchdiv input { 
+        width: 150px;
+        border-radius: 50px;
+        font-size: 1em;
+        padding-left: 10px;
+        background-image: url("img/search.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: 20px;
+     }
+     
+     .search {
+        font-weight: bold;
+        padding: 10px;
+        border-style: none;
+     }
+     
+     .search input {
+        float: left;
+        font-size: 0.8em; 
+        border-radius: 40px;
+        font-weight: bold;
+        margin: 1.5px 5px;
+        background-color: white;
+     }
+     
+     .member-register {
+        float: left;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: white;
+        margin: -2px 10px 1px 75px;
+        border-right: 1px solid white;
+     }
+     
+     #register {
+        margin: 0 10px 0 0;
+        padding: 0;
+     }
+     
+     #top-menu ul {
+        float: left;
+        color: white;
+        list-style-type: none;
+        font-size: 0.8em;
+        margin: -2px 0 0 -10px;
+        font-weight: bold;
+        padding-left: 9px;
+     }
+     
+     #top-menu li {
+        float: left;
+        margin: 0px;
+        padding-right: 18px;
+     }
+     
+     .break {
+         clear: both;
+     }
+     
+      .newsbar {
+         width: 100%;
+         height: 90px;
+         background-color: #eeeeee;
+         border-top: 1px solid white;
+     }
+     
+     .newsfixedwidth {
+         width: 1050px;
+         margin-left: 200px;
+    }
+     
+     #icbc {
+        float: left;
+        font-family: SimHei;
+        font-weight:bold;
+        letter-spacing:3px;
+        font-size: 170%;
+        padding: 17px 8px 0 0;
+        margin: 2px;
+     }
+    
+     #icbc-logo {
+        padding: 0px;
+        float:left;  
+     }
+    
+      #icbc-logo img {
+          margin: 43px 0 0 -5px;
+          width: 35px;
+          height: auto;
+      }    
+
+      #icbcChinese {
+          float: left;
+          font-family: SimHei;
+          font-size: 130%;
+          font-weight:bold;
+          letter-spacing:2px;
+          padding: 27px 0 0 8px;
+      }
+      
+      #icbcChinese p {
+          border-bottom: 2px solid #c7000a;
+      }
+      
+      #slogan {
+          float: left;
+          color: #c7000a;
+          font-size: 95%;
+          padding: 43px 0 0 15px;
+          font-weight: bold;
+      }
+      
+      #second-menu ul {
+        float: left;
+        color: black;
+        list-style-type: none;
+        font-size: 1.05em;
+        margin: 58px 0 0 60px;
+        font-weight: bold;
+        padding-left: 9px;
+      }
+     
+      #second-menu li {
+        float: left;
+        margin: 0px;
+        padding-right: 35px;
+      }
+
+      #ad-bar {
+        width:100%;
+        margin: 0;
+        padding: 0;
+      }
+              
+      #ad-image {
+      	 width:100%;
+         height: 45%;
+         float: left;
+         margin-top: -15.5px;
+         padding: 0;
+         position: absolute;
+         z-index: 0;
+      }
+     
+     
+        #eservice-image { 
+        	width: 50px;
+      	height: 110px;
+      	right: 0px;
+      	top: 295px;
+      	padding: 0;
+      	position: fixed;
+      	z-index: 1;
+      }
+      
+      #code-image {
+      	width: 50px;
+      	height: 50px;
+      	right: 0px;
+      	top: 415px;
+      	padding: 0;
+      	position: fixed;
+      	z-index: 1;
+      }
+      
+      #newsfixedwidth {
+         width: 1050px;
+         margin-left: 200px;
+         z-index: 1;
+      }
+      
+      #register-bar {
+         width: 230px;
+         height: 292px;
+         background-color: #d3d3d3;
+         float: left;
+         margin: -15px 0 0 200px;
+         padding: 0;
+         position: relative;
+         z-index: 1;
+      }
+      
+      #user-register {
+         background-color: #c7000a;
+         color: white;
+         padding: 8px 16px;
+         float: left;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         margin: 15px 0 0 15px;
+         font-size: 0.95em;
+      }
+      
+      #hr-color {
+         background-color: #c7000a;
+         border: none;
+         height: 1px;
+         float: left;
+         width: 230px;
+         margin-top: 0px;
+      }
+      
+      #personal-bankblock {
+         background-color: #EEEEEE;
+         height: 85px;
+         width: 195px;
+         float: left;
+         margin: 3px 17px;
+      }
+      #personal-bank {
+      	 background-color: #c7000a;
+         color: #EEEEEE;
+         padding: 5.5px 51px;
+         float: left;
+         border-radius: 5px;
+         margin: 1px 0 0 1px;
+         font-size: 0.95em;
+      }
+      #bankblock1 {
+      	font-size: 0.8em;
+      	float:left;
+      	margin: 15px 0 0 0;
+      }
+       #bankblock2 {
+      	font-size: 0.8em;
+      	float:left;
+      	margin: 3px 0 0 0;
+      }
+      #company-bankblock {
+      	 background-color: #EEEEEE;
+         height: 70px;
+         width: 195px;
+         float: left;
+         margin: 5px 17px;
+      }
+      #company-bank {
+      	 background-color: #c7000a;
+         color: #EEEEEE;
+         padding: 5.5px 51px;
+         float: left;
+         border-radius: 5px;
+         margin: 1px 0 0 1px;
+         font-size: 0.95em;
+      }
+      #bankblock3 {
+      	font-size: 0.8em;
+      	float:left;
+      	margin: 15px 0 0 0;
+      }
+      #shop-bankblock {
+      	background-color: white;
+        height: 50px;
+        width: 195px;
+        float: left;
+        margin: 5px 17px;
+        border-radius: 7px;
+      	background-image: url("img/eshop.png");
+        background-repeat: no-repeat;
+        background-position: 10px 8px;
+        background-size: 50px;
+      }
+      #eshop {
+      	color: #C7000A;
+      	margin: 5px 30px 0 95px;
+      	font-size:0.9em;
+      	font-weight: bold;
+      }
+      #bankblock4 {
+      	font-size: 0.75em;
+      	float:left;
+      	margin: 10px 2px 0 58px;
+      }
+      
+      #content {
+      	background-color: #D3D3D3;
+      	width: 100%;
+      	height: 675px;
+        z-index: 0;
+      }
+      
+      #fast-service {
+      	position: relative;
+     	width: 950px;
+     	height: 200px;
+     	margin: 55px 200px 5px 200px;
+        background-color: white;  
+        border-bottom: 15px solid #D3D3D3;
+        float: left;
+      }
+      #kuaijie-service {
+      	padding: 0px;
+      	border-bottom: 2px solid #C7000A;
+      	font-size: 0.9em;
+      	font-weight: bold;
+      	float: left;
+      	margin: 10px 10px 0px 30px;
+      	height: 40px;
+      }
+      #finance-info {
+      	padding-left: 20px;
+      	font-size:0.9em;
+      	float: left;
+      	margin: 10px 8px;
+      	line-height: 0.1;
+      }
+      #finance-info p{
+      	padding: 6px 20px 10px 35px;
+      	border-left: 1px solid black;
+      }
+      #fast-service-menu {
+      	float: left;
+      	clear: both;
+      }
+      #fast-service-menu ul {
+      	margin: 0;
+      	padding: 0;
+      	float: left;
+      }
+      #fast-service-menu li {
+      	list-style: none;
+      	font-size: 0.8em;
+      	font-weight: bold;
+      	padding: 0;
+      	float: left;
+      }
+      #fast-service-menu img {
+      	float: left;
+      	padding: 15px 0px 0 40px;
+      }
+       #fast-service-menu img:hover{
+      	width: 65px;
+      }
+      #fast-service-menu p {
+        padding-left: 40px;
+        margin-top: -2px;
+        line-height: 35px;
+        float: left;
+        clear: both;
+      }
+      #epay img {
+      	padding-top: 13px;
+      }
+      
+      #epay p {
+      	padding: -20px 0 0 40px;
+      	margin-top: -11.5px;
+      }
+      
+      #eregister p {
+      	margin-top: -3px;
+      	margin-left: -9px;
+      }
+      
+      #smartservice img {
+      	margin-left: -6px;
+      }
+      
+      #banksearching p {
+      	margin-left: -7px;
+      	margin-top: -3px;
+      }
+      #business img {
+      	padding-left: 32px;
+      	padding-top: 13.5px;
+      }
+      #business p {
+      	margin-left:-2px;
+      }
+      
+      #info {
+      	position: relative;
+     	width: 312px;
+     	height: 215px;
+     	margin: 0px 200px 5px 200px;
+     	top: -9px;
+        background-color: white;  
+        border-top: 1px solid #C7000A;
+        float: left;
+        clear:both;
+        z-index: 0;
+      }
+      
+      #improtant-info {
+      	padding: 0px;
+      	font-size: 0.9em;
+      	float: left;
+      	margin: 25px 10px 0px 30px;
+      	height: 40px;
+      	clear: both;
+      }
+      
+      #more1 {
+      	padding: 0px;
+      	font-size: 0.8em;
+      	float: left;
+      	margin: 28px 5px 0px 136px;
+      	height: 40px;
+      }
+      
+      #activities {
+      	position:relative;
+     	width: 630px;
+     	height: 215px;
+     	margin: 5px 200px 5px 200px;
+     	top: -14.5px;
+     	left: 320px;
+        background-color: white;  
+        border-top: 1px solid #C7000A;
+        z-index: 0;
+      }
+      
+      .info-activities {
+      	line-height: 5px;
+      	font-size: 0.75em;
+      }
+      .morethan{
+        font-size:1em;
+        color: #C7000A;	
+        padding-left: 25px;
+      }
+      #sales-activities {
+      	position: absolute;
+      	margin: 25px 0 0 30px;
+      	font-size:0.9em;
+      	float: left;
+      	clear:both;
+      	border-right: 1px solid black;
+      	padding-right:20px;
+      }
+      #news-intro {
+      	position: absolute;
+      	margin: 25px 40px 10px 130px;
+      	padding-bottom: 7px;
+      	font-size:0.9em;
+      	float: left;
+      	border-bottom: 2px solid #C7000A;
+      }
+       #more2 {
+      	padding: 0px;
+      	font-size: 0.8em;
+      	float: left;
+      	margin: 28px 5px 0px 36px;
+      	height: 40px;
+      }
+      .intro {
+      	font-size: 0.75em;
+      	float: left;
+      	position: absolute;
+        margin: 20px;
+        margin-top: 0;
+      }
+      #images {
+      	position: relative;
+     	width: 950px;
+     	height: 130px;
+     	margin: 0px 200px 5px 200px;
+        background-color: white; 
+        float: left;
+        top: -8px;
+     }
+     #leftarrow{
+     	margin: 40px 0 40px 20px;
+     }
+     #image1 {
+     	position: absolute;
+     	top: 21px;
+     	left:50px;
+     }
+     #image2 {
+     	position: absolute;
+     	top: 21px;
+     	left:335px;
+     }
+     #image3 {
+     	position: absolute;
+     	top: 21px;
+     	left:620px;
+     }
+     #rightarrow{
+     	top: 40px;
+     	right:18px;
+     	position: absolute;
+     }
+     #option1 {
+     	float: left;
+     	clear: both;
+     	margin: 0px 25px 0 500px;
+     }
+    
+     #redline {
+     	width: 100%;
+     	height: 4px;
+     	background-color: #C7000A;
+     	margin-top: 15px;
+     }
+     #last-bar {
+     	width: 100%;
+     	height: 60px;
+     	background-color: #eeeeee;
+     	padding: 0;
+     	margin: 0;
+     }
+     #last-bar {
+     	font-size: 0.8em;
+     }
+     #last-bar p{
+     	margin:0;
+     }
+     #developer {
+     	padding: 20px 0 0 400px;
+     	float: left;
+     	clear: both;
+     }
+     #tel {
+     	padding: 21px 0 0 80px;
+     	float: left;
+     }
+     #email{
+     	padding: 20px 0 0 80px;
+     	float: left;
+     }
+     
+    </style>    
+</head>
+
+<body>
+
+   <div class="topbar">
+   
+     <div class="fixedwidth">
+
+       <div class="searchdiv">
+              
+         <input type="text" />
+                
+       </div>
+              
+       <div class="search">
+            
+         <input type="submit" value="搜索" />
+              
+         <input type="submit" value="高级搜索" />
+               
+       </div>
+       
+       <div class="member-register">
+          
+          <p id="register">网站会员登录</p>
+       
+       </div>
+       
+       <div id="top-menu">
+       
+          <ul>
+          
+               <li>中文繁</li>
+               <li>English</li>
+               <li>全球主站</li>
+               <li>手机网站</li>
+              
+          </ul>
+       
+       </div>
+           
+     </div>
+     
+   </div>
+     
+     <div class="break"></div>
+     
+     <div class="newsbar">
+   
+        <div class="newsfixedwidth">
+           
+           <div id="icbc">
+           
+             <p>ICBC</p>
+           
+           </div>
+           
+           <div id="icbc-logo">
+           
+               <img src="../img/icbcsign.png" />
+             
+           </div>
+           
+           <div id="icbcChinese">
+           
+              <p>中国大宝银行</p>
+           
+           </div>
+           
+           <div id="slogan">
+            
+              <p>工于至诚&nbsp;&nbsp;&nbsp;行以致远</p>
+           
+           </div>
+           
+           <div id="second-menu">
+       
+             <ul>
+          
+               <li>首页</li>
+               <li>个人业务</li>
+               <li>企业业务</li>
+               <li>关于工行</li>
+               <li>客户服务</li>
+              
+             </ul>
+       
+            </div>
+            
+        </div>
+
+      </div>
+     
+     <div class="break"></div>
+    
+       <div id="ad-bar">
+        
+           <img id="eservice-image" src="../img/eservice.png"  />
+           <img id="ad-image" src="../img/ad.png"  />
+           <img id="code-image" src="../img/code.png"  />
+           
+           <div id="rsegister-fixedwidth">
+              
+              <div id="register-bar">
+              
+                  <p id="user-register">用户登录</p>
+                  
+                  <hr id="hr-color" />
+                  
+                  <div id="personal-bankblock">
+                  
+                     <p id="personal-bank">个人网上银行</p>
+                     <p id="bankblock1"> &nbsp;&nbsp;>注册&nbsp;&nbsp;>演示&nbsp;&nbsp;>指南&nbsp;&nbsp;>网银助手</p>
+                     <p id="bankblock2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>安全专区&nbsp;&nbsp;>防范假网站</p>
+                   
+                  </div>
+                  
+                  <div id="company-bankblock">
+                  
+                     <p id="company-bank">企业网上银行</p>
+                     <p id="bankblock3"> &nbsp;&nbsp;>注册&nbsp;&nbsp;>演示&nbsp;&nbsp;>指南&nbsp;&nbsp;>网银助手</p>
+                   
+                  </div>
+                  
+                  <div id="shop-bankblock">
+                  	
+                  	<div id="shop-bank">
+                  		
+                  		<p id="eshop">融e购商城</p>
+                  		<p id="bankblock4"> &nbsp;&nbsp;>个人商城&nbsp;&nbsp;>企业商城&nbsp;&nbsp;</p>
+                  		
+                  	</div>
+                  	
+                  </div>
+                  
+              </div>
+            
+           </div>
+          
+       </div>
+       
+       <div class="break"></div>
+       
+        <div id="content">
+        	 	
+        	 	<div id="fast-service">
+        	 	
+        	 	   <div id="kuaijie-service">
+        	 	   	 
+        	 	   	  <p>快捷服务</p>
+        	 	   	
+        	 	   </div>
+        	 	   
+        	 	   <div id="finance-info">
+        	 	   	
+        	 	   	  <p>金融信息</p>
+        	 	   	
+        	 	   </div>
+        	 	   
+        	 	   <div id="fast-service-menu">
+        	 	   	
+        	 	   	<ul>
+        	 	   		
+        	 	   		<li id="epay">
+        	 	   			<img src="../img/epay.png" />
+        	 	   			<p>工行e支付</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="elian">
+        	 	   			<img src="../img/elian.png" />
+        	 	   			<p>工银融e联</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="ebill">
+        	 	   			<img src="../img/ebill.png" />
+        	 	   			<p>工银e缴费</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="einvest">
+        	 	   			<img src="../img/einvest.png" />
+        	 	   			<p>工银e投资</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="eregister">
+        	 	   			<img src="../img/eregister.png" />
+        	 	   			<p>手机银行注册</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="smartservice">
+        	 	   			<img src="../img/smartservice.png" />
+        	 	   			<p>智能服务</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="applyonline">
+        	 	   			<img src="../img/applyonline.png" />
+        	 	   			<p>网上申请</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="banksearching">
+        	 	   			<img src="../img/banksearching.png" />
+        	 	   			<p>开户网点查询</p>
+        	 	   		</li>
+        	 	   		
+        	 	   		<li id="business">
+        	 	   			<img src="../img/business.png" />
+        	 	   			<p>业务验证</p>
+        	 	   		</li>
+        	 	   		
+        	 	   	</ul>
+        	 	   	
+        	 	   </div>
+        	 	   
+        	    </div>
+   	
+   	        <div class="break"></div>
+       	
+       	<div id="info">
+       		
+       		<p id="improtant-info">重要公告</p>
+       		<p id="more1">更多>></p>
+       		<br  /><br  /><br  /><br  />
+       		<p class="info-activities"><span class="morethan">></span>关于调整工银e支付客户交易限额的通告</p>
+       		<p class="info-activities"><span class="morethan">></span>关于销售国家开发银行2015年第十七期金融债券…</p>
+       		<p class="info-activities"><span class="morethan">></span>关于调整周末及法定节假日期间小额支付系统普…</p>
+       		<p class="info-activities"><span class="morethan">></span>个人大额存单发行公告</p>
+       		<p class="info-activities"><span class="morethan">></span>关于实施商友客户分级服务的通告</p>
+       		
+       	</div>
+       	
+       	<div id="activities">
+       		<p id="sales-activities">优惠活动</p>
+       		<p id="news-intro">新品推荐</p>
+       		<p id="more2">更多>></p>
+       		<br  /><br  /><br  /><br  />
+       		<p class="intro"><span class="morethan">></span>个人高净值客户专属126天稳利人民币理财产品 新品上市</p><br  />
+       		<p class="intro"><span class="morethan">></span>南方顺达保本（000326） 新品上市</p><br  />
+       		<p class="intro"><span class="morethan">></span>上投医疗健康股票基金（001766）新品上市</p><br  />
+       		<p class="intro"><span class="morethan">></span>华润元大稳健债券A（001212） 新品上市</p><br  />
+       		<p class="intro"><span class="morethan">></span>中融稳健添利（001779） 新品上市</p>
+       	</div>
+       	
+       	<div id="images">
+       		<div id="leftarrow">
+       			<img src="../img/leftarrow.png"  />
+       		</div>
+       		<div id="image1">
+       			<img src="../img/image1.png"  />
+       		</div>
+       		<div id="image2">
+       			<img src="../img/image2.png"  />
+       		</div>
+       		<div id="image3">
+       			<img src="../img/image3.png"  />
+       		</div>
+       		<div id="rightarrow">
+       			<img src="../img/rightarrow.png"  />
+       		</div>
+       	</div>
+   
+   <div id="option1">
+   <select>
+   	<option>中国大宝银行系列网站</option>
+   	<option value="1">成都分行</option>
+   	<option value="2">重庆分行</option>
+   	<option value="3">北京分行</option>
+   	<option value="4">上海分行</option>
+   	<option value="5">新疆分行</option>
+   </select>
+   </div>
+   
+   <div id="option2">
+   <select>
+   	<option>友情链接</option>
+   	<option value="1">淘宝网</option>
+   	<option value="2">阿里巴巴</option>
+   	<option value="3">微信</option>
+   </select>
+   </div>
+   <div id="redline"></div>
+ </div>
+ <div id="last-bar">
+ 	 <p id="developer">周亭羽</p>
+ 	 <p id="tel">TEL:18780202846</p>
+ 	 <p id="email">E-mail:tingyu_zhou103@163.com</p>
+ </div>
+ 
+    
+     
+
+  
+
+
+
+</body>
+</html>

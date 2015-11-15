@@ -1,0 +1,212 @@
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: black;
+    display: block;
+}
+img {
+    width: 100%;
+    display: block;
+}
+li {
+    list-style-type: none;
+}
+section{
+    width: 100%;
+    overflow: hidden;
+}
+.floatleft {
+    float: left;
+}
+#header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 2px solid orange;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+}
+#header.open {
+    height: 360px;
+}
+#logo {
+    margin: 5px;
+    width: auto;
+    height: 50px;
+}
+#菜单项 > li {
+    position: relative;
+    font-size: large;
+    width: 20%;
+    max-width: 115px;
+    padding: 0;
+    text-align: center;
+    float: left;
+}
+#菜单项.显示 {
+    display: block;
+}
+#菜单项 > li > a {
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 18px;
+}
+#菜单项 > li:hover {
+    animation: myfirst 2s;
+    -moz-animation: myfirst 2s; /* Firefox */
+    -webkit-animation: myfirst 2s; /* Safari 和 Chrome */
+    -o-animation: myfirst 2s; /* Opera */
+    background-color: orange;
+}
+@keyframes myfirst {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background: orange;
+    }
+}
+@-moz-keyframes myfirst /* Firefox */
+{
+    0% {
+        background-color: white;
+    }
+    100% {
+        background: orange;
+    }
+}
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+    0% {
+        background-color: white;
+    }
+    100% {
+        background: orange;
+    }
+}
+@-o-keyframes myfirst /* Opera */
+{
+    0% {
+        background-color: white;
+    }
+    100% {
+        background: orange;
+    }
+}
+.子菜单 {
+    list-style-type: none;
+    top: -2px;
+    background-color: white;
+    position: relative;
+    text-align: center;
+    display: none;
+    z-index: 2;
+}
+.子菜单 > li:hover {
+    animation: myfirst 2s;
+    -moz-animation: myfirst 2s; /* Firefox */
+    -webkit-animation: myfirst 2s; /* Safari 和 Chrome */
+    -o-animation: myfirst 2s; /* Opera */
+    background-color: orange;
+}
+#学习历程:hover .子菜单 {
+    display: block;
+}
+.子菜单 li a {
+    position: relative;
+    padding: 12px 0;
+}
+#slide{
+    width: 400%;
+    position: relative;
+}
+.第一块 {
+    width: 25%;
+    z-index: 0;
+    position: relative;
+    height: auto;
+    border-bottom: solid 1px orange;
+    left: 0px;
+    float: left;
+}
+.custom-toggle {
+    width: 34px;
+    height: 34px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    display: none;
+}
+.custom-toggle .bar {
+    background-color: #777;
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 100px;
+    position: absolute;
+    top: 18px;
+    right: 7px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.custom-toggle .bar:first-child {
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+.custom-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.custom-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+@media (max-width: 47.999em) {
+    .custom-toggle {
+        display: block;
+    }
+    #菜单项 {
+        display: none;
+    }
+    #菜单项 > li {
+        width: 100%;
+        max-width: 768px;
+    }
+    #菜单项 > li > a {
+        width: 100%;
+    }
+    .子菜单 {
+        top: -7px;
+    }
+}
+#图库1 {
+    width: 80%;
+    margin: 30px auto 0 auto;
+    border-top: 1px solid orange;
+    overflow: hidden;
+    position: relative;
+}
+#图库1 ul {
+    position: relative;
+}
+#图库1 li {
+    width: 8.333333333333333333%;
+    border-bottom: 1px solid orange;
+    border-top: 1px solid orange;
+    padding: 0;
+    float: left;
+}
+footer {
+    width: 100%;
+    height: 150px;
+}

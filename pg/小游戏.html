@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Learning Javascript</title>
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<p>你的反应够快嘛？</p>
+<div id="circle"></div>
+<p>你的反应时间:<span id="time"></span>s</p>
+<p>最佳反应时间:<span id="shortestT"></span>s</p>
+<p>平均反应时间:<span id="averageT"></span>s</p>
+<script type="text/javascript">
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.round(Math.random() * 15)];
+        }
+        return color;
+    }
+    var createdTime;
+    var clickedTime;
+    var reactionTime;
+    var shortestTime = 10000;
+    var averageTime = 0;
+    var totalTime = 0;
+    var i = 0;
+    var circle = document.getElementById("circle");
+    function makeBox() {
+        var time = Math.random()*2000;
+        setTimeout(function () {
+            var top = Math.random()*400;
+            var left = Math.random()*400;
+            circle.style.top = top + "px";
+            circle.style.left = left + "px";
+            circle.style.backgroundColor = getRandomColor();
+            circle.style.display = "block";
+            createdTime = Date.now();
+        }, time)
+    }
+    circle.onclick = function () {
+        clickedTime = Date.now();
+        circle.style.display = "none";
+        reactionTime = (clickedTime - createdTime) / 1000;
+        document.getElementById("time").innerHTML = reactionTime;
+        shortestTime = shortestTime > reactionTime ? reactionTime : shortestTime;
+        document.getElementById("shortestT").innerHTML = shortestTime;
+        totalTime += reactionTime;
+        i++;
+        averageTime = totalTime / i;
+        document.getElementById("averageT").innerHTML = Math.round(averageTime * 1000) / 1000;
+        makeBox();
+    };
+    makeBox();
+</script>
+</body>
+</html>

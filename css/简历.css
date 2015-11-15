@@ -1,0 +1,51 @@
+			html, body {
+            margin-top: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+ 			transition:all 1.5s;
+ 			-webkit-transition: all 1.5s;
+			}
+            }
+            pre {
+            overflow:auto;
+            max-height:90%;
+            width:100%;
+            border-radius: 1px; /* Prevents bad clipping in Chrome */
+            transition:all 1.5s;
+ 			-webkit-transition: all 1.5s;
+            }
+            #text2{
+			color: white;
+            	}
+            #text3 {
+            	position:absolute;
+            	top: 0px;
+            	left: 0px;
+            	margin:0;
+            	width:44.5%;
+            	height:95%;
+            	background-color:#303030;
+            	padding-left:20px;
+            	color:#FFFFFF;
+            	border:1px solid #ccc;
+            	overflow:auto;
+            	z-index: 1;
+            	display: none;
+            }
+            h1{
+            	color:white;
+            	width: 70%;
+            	border-bottom:1px solid white;
+            }
+            h4{
+            	color:white;
+            	padding-bottom: 0;
+            	}
+            	#简历1{
+            		border-top: 1px solid white;
+            		width: 70%;
+            		padding-top: 10px;
+            		font-size: 14px;
+            		line-height: 32px;
+            	}
